@@ -1,0 +1,530 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: #444;
+  font-family: Sans-Serif;
+}
+header {
+  background: white;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  height: 60px;
+  box-shadow: 2px 1px 1px white;
+  z-index: 100000;
+}
+header img {
+  width: 30%;
+  height: 100%;
+  margin: 0px 10px;
+}
+header i {
+  top: 41%;
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+}
+main {
+  color: white;
+  text-align: center;
+  display: grid;
+  margin-top: 16px;
+  line-height: 2em;
+  margin-left: 15px;
+}
+main h3 {
+  font-family: serif;
+}
+main div {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+main p {
+  font-weight: 200;
+}
+.abt-btn, .quote-btn {
+  padding: 11px 16px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+}
+.quote-btn a:hover {
+  color: #ddd;
+}
+.quote-btn {
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+}
+.abt-btn {
+  border: 1px solid #aaa;
+  color: black;
+  background: white;
+}
+.img-div {
+  margin: 30px;
+  border: 1px dotted white;
+  padding: 8px;
+  border-radius: 10px;
+}
+.img-1 {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+}
+.changing-text {
+  font-weight: bold;
+  color: #ccc;
+}
+.good-at {
+  background: #aaa;
+  margin: 50px 30px 15px;
+  border-radius: 2px;
+}
+.good-at h4 {
+  text-align: center;
+  font-family: serif;
+  font-weight: bold;
+}
+.all-grid {
+  display: flex;
+  color: white;
+  margin: 8px 20px;
+  text-align: center;
+  background: none;
+}
+.all-grid p {
+  margin-left: 10px;
+  font-size: 13px;
+  font-weight: 300;
+} 
+.all-col {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  background: #333;
+  width: 50%;
+}
+.all-col h4 {
+  font-family: serif;
+  margin: 5px 10px 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.info {
+  margin: 30px;
+  color: black;
+  border: 1px solid white;
+  background: #ddd;
+  border-radius: 5px;
+}
+.info h5 {
+ margin: 20px 10px;
+ font-family: serif;
+}
+.info p {
+  margin: 10px;
+  font-weight: 300;
+}
+nav {
+  position: fixed;
+  top: 60px;
+  right: -290px;
+  background: #ccc;
+  width: 70%;
+  height: 230px;
+  padding: 10px;
+  font-family: serif;
+  border-radius: 5px;
+  opacity: 0.3;
+  transition: opacity, 1.1s;
+  visibility: hidden;
+  z-index: 100000;
+}
+.show {
+  opacity: 1;
+  visibility: visible;
+  right: 0px;
+}
+.exit {
+  visibility: hidden;
+  transform: scale(0.1);
+  transition: transform, 0.4s;
+}
+.exit-show {
+  visibility: visible;
+  transform: scale(1);
+}
+.bars {
+  visibility: visible;
+  transform: scale(1);
+  transition: transform, 0.4s;
+}
+.bars-remove {
+  visibility: hidden;
+  transform: scale(0.1);
+}
+nav ul {
+  list-style-type: none;
+}
+nav li {
+  border-bottom: 1px solid #666;
+  margin: 20px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+nav li:last-child {
+  border-bottom: none;
+}
+a {
+  text-decoration: none;
+  color: currentcolor;
+  transition: color, 0.5s;
+}
+a:hover {
+  color: #888;
+}
+input {
+  width: 70%;
+  height: 40px;
+  border-radius: 5px;
+  margin: 0px 50px;
+  box-shadow: none;
+  border: none;
+  padding: 10px;
+}
+input:focus {
+  outline: 1px solid #222;
+}
+.submit-btn {
+  padding: 10px 13px;
+  border-radius: 5px;
+  background: #aaa;
+  color: black;
+  border: none;
+  position: absolute;
+  right: 70px;
+  margin-top: 10px;
+}
+.quote-h4 {
+  text-align: center;
+  font-family: serif;
+  color: white;
+  margin: 40px;
+}
+#quote {
+  background: #333;
+  margin: 30px 30px;
+  border-radius: 8px;
+  height: 220px;
+  padding-top: 10px;
+}
+
+/* ///// */
+
+/* Slideshow container */
+.slideshow-container {
+  width: 85vw;
+  position: relative;
+  margin: 40px 30px 30px;
+}
+.img-border {
+  width: 100%;
+  height: 220px; 
+  padding: 8px;
+  border-radius: 12px;
+}
+
+/* another media query **specifically for
+slideshow** */
+@media screen and (min-width: 500px)
+{ 
+  .slideshow-container {
+    max-width: 1000px;
+  }
+  .slideshow-container a {
+    font-size: 55px;
+  }
+  .numbertext {
+    display: none;
+  } 
+  .img-border {
+    margin-bottom: 50px;
+  }
+  .text div {
+    margin-left: 200px;
+  }
+}
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+.mySlides p {
+  color: white;
+  text-align: center;
+  font-family: serif;
+  margin-bottom: 15px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: -10%;
+  width: auto;
+  margin-top: 150px;
+  padding: 16px;
+  color: #999;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  display: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: -20px;
+  border-radius: 3px 0 0 3px;
+}
+.prev {
+  left: -20px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #333;
+}
+
+/* Caption text */
+.text {
+  color: #999;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: -10vw;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  right: 10000px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 0.7vh;
+  width: 1vw;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 4.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
+footer {
+  background: #ddd;
+  margin: 35px;
+  padding: 15px 5px 8px 15px;
+  border-radius: 5px;
+  line-height: 2em;
+}
+footer h4 {
+  font-family: serif;
+}
+footer p {
+  margin-block: 15px;
+  font-weight: 300;
+}
+.phone-1 {
+  margin-left: 5px;
+}
+.phone-2 {
+  margin-left: 10px;
+}
+.phone-fb {
+  margin-left: 15px;
+}
+.phone-year {
+  margin-left: 19px;
+}
+.lg-nav {
+  display: none;
+}
+@media screen and (min-width: 500px) {
+  header {
+    height: 140px;
+    display: flex;
+  }
+  .phone-year {
+    margin-left: 0;
+  }
+  #bars {
+    display: none;
+  }
+  .lg-nav {
+    display: block;
+    margin: 40px 10px 10px 110px;
+  }
+  .lg-nav ul {
+    display: flex;
+    list-style-type: none;
+  }
+  .lg-nav li {
+    margin: 10px;
+    font-size: 28px;
+    font-family: serif;
+  }
+  .img-div {
+    border: 2px dotted white;
+  } 
+  .img-1 {
+    height: 500px;
+  }
+  main {
+    font-size: 10px;
+    line-height: 3.2em;
+    margin-top: 20px;
+  }
+  .abt-btn, .quote-btn {
+    font-size: 23px;
+    margin-bottom: 25px;
+  }
+  .good-at {
+    font-size: 10px;
+    margin: 40px 40px 20px 40px;
+    border-radius: 7px;
+  }
+  .slideshow-container {
+    margin-top: 45px;
+  }
+  .slideshow-container img {
+    margin: 20px 25px;
+  }
+  #earthworks {
+    width: 96%;
+  } 
+  .info {
+    margin: 20px 47px 55px 47px;
+  }
+  .all-col {
+    width: 47%;
+    padding: 25px;
+    border-radius: 7px;
+  }
+  .all-grid i {
+    font-size: 30px;
+  }
+  .all-grid {
+    justify-content: center;
+  }
+  .all-col p, .info p {
+    font-size: 22px;
+  }
+  .all-col h4 {
+    font-size: 26px;
+  }
+  .info h5 {
+    font-size: 9px;
+  }
+ .info p {
+   font-size: 10px;
+ }
+.slideshow-container {
+   width: 95%;
+ }
+ .slideshow-container p {
+   font-size: 11px;
+ }
+ .img-border {
+   height: 500px; 
+ }
+ .quote-input {
+   width: 80%;
+ }
+ .submit-btn {
+   position: static;
+   margin-left: -30px;
+   font-size: 17px;
+ }
+ .quote-h4 {
+   font-size: 26px;
+ }
+ .or-text {
+   font-size: 10px;
+ }
+ footer h4 {
+   font-size: 11px;
+ }
+ footer p {
+   font-size: 11px;
+ }
+ svg, footer i {
+   font-size: 25px;
+ }
+ footer {
+   margin: 35px 50px;
+ }
+#quote {
+  margin: 45px 40px;
+}
+  nav {
+   /* visibility: visible;
+    opacity: 1;
+    display: flex;
+    position: absolute;
+    top: 0;
+    background: none; */
+  }
+  .phone-1 {
+    margin-left: 11px;
+  }
+  .phone-2 {
+    margin-left: 25px;
+  }
+  .gmail {
+    margin-left: 35px;
+  }
+  .phone-fb {
+    margin-left: 40px;
+  }
+  #clients {
+    margin-top: 55px;
+  }
+  sup {
+    margin-left: 15px;
+  }
+}
