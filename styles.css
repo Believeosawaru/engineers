@@ -7,7 +7,7 @@ html {
   scroll-behavior: smooth;
 }
 svg {
-  color: white;
+  fill: white;
 }
 body {
   background: #444;
